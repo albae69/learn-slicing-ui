@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 
-import bg from '../../assets/images/Bubbles.jpg';
+import bg from '../../assets/images/Bubbles.png';
 import {style} from './style';
 
 const SplashScreen = () => {

@@ -2,17 +2,17 @@ import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 
 import {style} from './style.js';
-import bg from '../../assets/images/Bubbles.jpg';
+import bg from '../../assets/images/Bubbles.png';
 import Button from '../../components/Button';
 
-const Introduction = () => {
+const Introduction = ({navigation}) => {
   return (
     <View style={style.container}>
       <ImageBackground source={bg} style={style.image}>
         <Text style={style.companyTitle}>Spiice</Text>
         <Button
           title="Discover the platform"
-          onPress={() => console.log('gg')}
+          onPress={() => navigation.navigate('Unboarding')}
           activeOpacity={0.8}
         />
         <Text style={style.question}>

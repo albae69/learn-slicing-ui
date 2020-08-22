@@ -10,19 +10,32 @@ export const style = StyleSheet.create({
     height: hp('100%'),
     width: wp('100%'),
   },
-  image: {
+  imageBackground: {
     height: hp('100%'),
     width: wp('100%'),
     resizeMode: 'cover',
-    justifyContent: 'center',
     alignItems: 'center',
   },
+  image: {
+    margin: 0,
+  },
   companyTitle: {
+    marginTop: 50,
     textAlign: 'center',
-    fontSize: 96,
+    fontSize: 32,
     fontFamily: 'RedHatDisplay-Medium',
     position: 'relative',
-    top: -hp('100%') / 5,
-    marginTop: hp('20%'),
+  },
+  text: {
+    width: wp('60%'),
+    textAlign: 'center',
+    position: 'absolute',
+    bottom: hp('20%'),
+  },
+  slide: {
+    height: hp('100%'),
+    width: wp('100%'),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
