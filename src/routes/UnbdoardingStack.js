@@ -10,7 +10,7 @@ const UnbdoardingStack = () => {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator headerMode="none" initialRouteName="Login">
+    <Stack.Navigator headerMode="none">
       <Stack.Screen name="Introduction" component={IntroductionScreen} />
       <Stack.Screen name="Unboarding" component={UnboardingScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
