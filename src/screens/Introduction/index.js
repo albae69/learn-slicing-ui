@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
+import {View, Text, ImageBackground, Pressable} from 'react-native';
 
 import {style} from './style.js';
 import bg from '../../assets/images/Bubbles.png';
@@ -16,7 +16,10 @@ const Introduction = ({navigation}) => {
           activeOpacity={0.8}
         />
         <Text style={style.question}>
-          You have an account? <Text style={{fontWeight: 'bold'}}>Login</Text>
+          You have an account?{' '}
+          <Pressable onPress={() => navigation.navigate('Login')}>
+            <Text style={{fontWeight: 'bold'}}>Login</Text>
+          </Pressable>
         </Text>
       </ImageBackground>
     </View>
