@@ -21,7 +21,7 @@ const Register = ({navigation}) => {
   return (
     <View style={style.container}>
       <ImageBackground source={bg} style={style.imageBackground}>
-        <View style={style.form}>
+        <Pressable style={style.form} onPress={() => Keyboard.dismiss()}>
           <Text style={style.signUp}>Sign-Up</Text>
           <Formik
             initialValues={{
@@ -101,7 +101,7 @@ const Register = ({navigation}) => {
               <Text style={{fontWeight: 'bold'}}>Login</Text>
             </Text>
           </Pressable>
-        </View>
+        </Pressable>
       </ImageBackground>
     </View>
   );

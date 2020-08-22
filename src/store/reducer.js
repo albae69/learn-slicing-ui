@@ -1,15 +1,13 @@
-import {INCREMENT, DECREMENT} from './types';
+import {LOGIN} from './types';
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case INCREMENT:
+    case LOGIN:
       return {
-        count: state.count + 1,
+        ...state,
+        isLogin: true,
       };
-    case DECREMENT:
-      return {
-        count: state.count - 1,
-      };
+
     default:
       return state;
   }
