@@ -21,22 +21,22 @@ const Introduction = () => {
     {
       id: 2,
       img: dollar,
-      text: ' Project from companies everywhere in the world',
+      text: 'Make money while on working on awesome projects',
     },
     {
       id: 3,
       img: chat,
-      text: ' Project from companies everywhere in the world',
+      text: 'Chat with others freelancers and develop your network',
     },
     {
       id: 4,
-      img: heart,
-      text: ' Project from companies everywhere in the world',
+      img: levelUp,
+      text: 'Work hard and level up!',
     },
     {
       id: 5,
-      img: levelUp,
-      text: ' Project from companies everywhere in the world',
+      img: heart,
+      text: 'Enjoy your progress!',
     },
   ];
 
