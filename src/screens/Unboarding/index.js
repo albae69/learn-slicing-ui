@@ -23,31 +23,31 @@ import levelUp from '../../assets/images/LevelUp.png';
 const Introduction = ({navigation}) => {
   const [loading, setLoading] = useState(false);
   const data = [
-    // {
-    //   id: 1,
-    //   img: planet,
-    //   text: 'Find Project from companies everywhere in the world',
-    // },
-    // {
-    //   id: 2,
-    //   img: dollar,
-    //   text: 'Make money while on working on awesome projects',
-    // },
-    // {
-    //   id: 3,
-    //   img: chat,
-    //   text: 'Chat with others freelancers and develop your network',
-    // },
-    // {
-    //   id: 4,
-    //   img: levelUp,
-    //   text: 'Work hard and level up!',
-    // },
-    // {
-    //   id: 5,
-    //   img: heart,
-    //   text: 'Enjoy your progress!',
-    // },
+    {
+      id: 1,
+      img: planet,
+      text: 'Find Project from companies everywhere in the world',
+    },
+    {
+      id: 2,
+      img: dollar,
+      text: 'Make money while on working on awesome projects',
+    },
+    {
+      id: 3,
+      img: chat,
+      text: 'Chat with others freelancers and develop your network',
+    },
+    {
+      id: 4,
+      img: levelUp,
+      text: 'Work hard and level up!',
+    },
+    {
+      id: 5,
+      img: heart,
+      text: 'Enjoy your progress!',
+    },
     {
       id: 6,
       signUp: true,
@@ -171,7 +171,11 @@ const Introduction = ({navigation}) => {
     <View style={style.container}>
       <ImageBackground source={bg} style={style.imageBackground}>
         <Text style={style.companyTitle}>Spiice</Text>
-        <ScrollView horizontal decelerationRate="fast" pagingEnabled>
+        <ScrollView
+          horizontal
+          decelerationRate="fast"
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}>
           {data.map((s) => (
             <View key={s.id}>
               <Slide img={s.img} text={s.text} signUp={s.signUp} />

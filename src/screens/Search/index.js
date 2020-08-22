@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const Settings = () => {
+const Search = () => {
   return (
     <View>
-      <Text>this is a settings screen.</Text>
+      <Text>this is a search</Text>
     </View>
   );
 };
 
-export default Settings;
+export default Search;

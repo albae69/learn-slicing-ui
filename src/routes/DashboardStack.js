@@ -1,9 +1,22 @@
 import React from 'react';
+import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icons from 'react-native-vector-icons/MaterialIcons';
 
-import Home from '../screens/Home';
-import Settings from '../screens/Settings';
+import HomeScreen from '../screens/Home';
+import SearchScreen from '../screens/Search';
+import MessageScreen from '../screens/Message';
+import ProfileScreen from '../screens/Profile';
+
+import {
+  home,
+  homeActive,
+  search,
+  searchActive,
+  message,
+  messageActive,
+  profile,
+  profileActive,
+} from '../assets/icons';
 
 const DashboardStack = () => {
   const Tab = createBottomTabNavigator();
@@ -14,23 +27,27 @@ const DashboardStack = () => {
         tabBarIcon: ({focused, color}) => {
           let iconName;
           if (route.name === 'Home') {
-            iconName = focused ? 'home' : 'home';
-          } else if (route.name === 'Settings') {
-            iconName = focused ? 'settings' : 'settings';
+            iconName = focused ? homeActive : home;
+          } else if (route.name === 'Search') {
+            iconName = focused ? searchActive : search;
+          } else if (route.name === 'Message') {
+            iconName = focused ? messageActive : message;
+          } else if (route.name === 'Profile') {
+            iconName = focused ? profileActive : profile;
           }
-          return <Icons name={iconName} size={25} color={color} />;
+          return <Image source={iconName} alt="" />;
         },
       })}
       tabBarOptions={{
-        activeTintColor: 'red',
-        inactiveTintColor: 'lightgray',
-        showLabel: true,
+        showLabel: false,
         showIcon: true,
         keyboardHidesTabBar: true,
         indicatorStyle: {width: 0},
       }}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Search" component={SearchScreen} />
+      <Tab.Screen name="Message" component={MessageScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 };
