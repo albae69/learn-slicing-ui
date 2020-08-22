@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -14,6 +14,7 @@ import bg from '../../assets/images/Bubbles.png';
 import {style} from './style';
 
 const Register = ({navigation}) => {
+  const [loading, setLoading] = useState(false);
   const lastNameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -30,7 +31,12 @@ const Register = ({navigation}) => {
               email: 'email@john.doe',
               password: 'blankblank',
             }}
-            onSubmit={(values) => navigation.navigate('Login')}>
+            onSubmit={(values) => {
+              setLoading(true);
+              setTimeout(() => {
+                navigation.navigate('Login');
+              }, 1000);
+            }}>
             {({handleChange, handleBlur, handleSubmit, values}) => (
               <View>
                 <TextInput
@@ -91,6 +97,7 @@ const Register = ({navigation}) => {
                   title="Sign-up"
                   styles={{height: 50}}
                   onPress={handleSubmit}
+                  loading={loading}
                 />
               </View>
             )}

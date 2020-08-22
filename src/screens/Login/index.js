@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -21,6 +21,7 @@ import useStateContext from '../../store/useStateContext';
 import {LOGIN} from '../../store/types';
 
 const Register = ({navigation}) => {
+  const [loading, setLoading] = useState(false);
   const {dispatch} = useStateContext();
   const passwordRef = useRef();
 
@@ -34,7 +35,12 @@ const Register = ({navigation}) => {
               email: 'email@john.doe',
               password: 'blankblank',
             }}
-            onSubmit={(values) => dispatch({type: LOGIN})}>
+            onSubmit={(values) => {
+              setLoading(true);
+              setTimeout(() => {
+                dispatch({type: LOGIN});
+              }, 1000);
+            }}>
             {({handleChange, handleBlur, handleSubmit, values}) => (
               <View>
                 <TextInput
@@ -65,6 +71,7 @@ const Register = ({navigation}) => {
                   title="Sign-in"
                   styles={{height: 50, marginTop: 50}}
                   onPress={handleSubmit}
+                  loading={loading}
                 />
               </View>
             )}

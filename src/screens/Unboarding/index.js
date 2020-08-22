@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -21,32 +21,33 @@ import heart from '../../assets/images/Heart.png';
 import levelUp from '../../assets/images/LevelUp.png';
 
 const Introduction = ({navigation}) => {
+  const [loading, setLoading] = useState(false);
   const data = [
-    {
-      id: 1,
-      img: planet,
-      text: 'Find Project from companies everywhere in the world',
-    },
-    {
-      id: 2,
-      img: dollar,
-      text: 'Make money while on working on awesome projects',
-    },
-    {
-      id: 3,
-      img: chat,
-      text: 'Chat with others freelancers and develop your network',
-    },
-    {
-      id: 4,
-      img: levelUp,
-      text: 'Work hard and level up!',
-    },
-    {
-      id: 5,
-      img: heart,
-      text: 'Enjoy your progress!',
-    },
+    // {
+    //   id: 1,
+    //   img: planet,
+    //   text: 'Find Project from companies everywhere in the world',
+    // },
+    // {
+    //   id: 2,
+    //   img: dollar,
+    //   text: 'Make money while on working on awesome projects',
+    // },
+    // {
+    //   id: 3,
+    //   img: chat,
+    //   text: 'Chat with others freelancers and develop your network',
+    // },
+    // {
+    //   id: 4,
+    //   img: levelUp,
+    //   text: 'Work hard and level up!',
+    // },
+    // {
+    //   id: 5,
+    //   img: heart,
+    //   text: 'Enjoy your progress!',
+    // },
     {
       id: 6,
       signUp: true,
@@ -75,7 +76,12 @@ const Introduction = ({navigation}) => {
                       email: 'email@john.doe',
                       password: 'blankblank',
                     }}
-                    onSubmit={(values) => navigation.navigate('Login')}>
+                    onSubmit={(values) => {
+                      setLoading(true);
+                      setTimeout(() => {
+                        navigation.navigate('Login');
+                      }, 1000);
+                    }}>
                     {({handleChange, handleBlur, handleSubmit, values}) => (
                       <View>
                         <TextInput
@@ -136,6 +142,7 @@ const Introduction = ({navigation}) => {
                           title="Sign-up"
                           styles={{height: 50}}
                           onPress={handleSubmit}
+                          loading={loading}
                         />
                       </View>
                     )}
