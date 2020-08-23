@@ -30,7 +30,7 @@ export const style = StyleSheet.create({
     width: wp('60%'),
     textAlign: 'center',
     position: 'absolute',
-    bottom: hp('20%'),
+    bottom: hp('25%'),
   },
   slide: {
     height: hp('100%'),

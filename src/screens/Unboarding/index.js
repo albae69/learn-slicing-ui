@@ -4,12 +4,16 @@ import {
   Text,
   ImageBackground,
   Image,
-  ScrollView,
   TextInput,
   Pressable,
   Keyboard,
 } from 'react-native';
 import {Formik} from 'formik';
+import Swiper from 'react-native-swiper';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 import Button from '../../components/Button';
 import {style} from './style.js';
@@ -174,17 +178,15 @@ const Introduction = ({navigation}) => {
     <View style={style.container}>
       <ImageBackground source={Bubbles} style={style.imageBackground}>
         <Text style={style.companyTitle}>Spiice</Text>
-        <ScrollView
-          horizontal
-          decelerationRate="fast"
-          pagingEnabled
-          showsHorizontalScrollIndicator={false}>
+        <Swiper
+          dotStyle={{marginBottom: 50}}
+          activeDotStyle={{marginBottom: 50}}>
           {data.map((s) => (
             <View key={s.id}>
               <Slide img={s.img} text={s.text} signUp={s.signUp} />
             </View>
           ))}
-        </ScrollView>
+        </Swiper>
       </ImageBackground>
     </View>
   );
