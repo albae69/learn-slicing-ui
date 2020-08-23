@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 import {Charts} from '../../assets/images/';
 import {style} from './style.js';
@@ -7,7 +7,7 @@ import ProjectCards from '../../components/ProjectCards';
 
 import useStateContext from '../../store/useStateContext';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const {state} = useStateContext();
   const project = state.project;
   return (
@@ -17,9 +17,11 @@ const Home = () => {
       <Image source={Charts} style={style.charts} />
       <View style={style.listContainer}>
         <Text style={style.activeProject}>Active Projects</Text>
-        <View style={style.viewBtn}>
+        <TouchableOpacity
+          style={style.viewBtn}
+          onPress={() => navigation.navigate('Projects')}>
           <Text style={style.viewText}>View All</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={style.projectContainer}>
         {project.map((p) => (

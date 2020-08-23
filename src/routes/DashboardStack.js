@@ -2,7 +2,8 @@ import React from 'react';
 import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import HomeScreen from '../screens/Home';
+import HomeStack from '../routes/HomeStack';
+
 import SearchScreen from '../screens/Search';
 import MessageScreen from '../screens/Message';
 import ProfileScreen from '../screens/Profile';
@@ -45,7 +46,7 @@ const DashboardStack = () => {
         indicatorStyle: {width: 0},
       }}
       initialRouteName="Home">
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home">{() => <HomeStack />}</Tab.Screen>
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Message" component={MessageScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
