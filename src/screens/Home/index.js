@@ -25,7 +25,9 @@ const Home = ({navigation}) => {
       </View>
       <View style={style.projectContainer}>
         {project.map((p) => (
-          <ProjectCards title={p.title} owner={p.owner} status={p.status} />
+          <View key={p.id}>
+            <ProjectCards title={p.title} owner={p.owner} status={p.status} />
+          </View>
         ))}
       </View>
     </View>

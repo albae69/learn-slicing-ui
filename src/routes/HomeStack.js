@@ -12,8 +12,8 @@ const UnbdoardingStack = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName="Projects"
       headerMode="none"
+      initialRouteName="Projects"
       screenOptions={{
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
