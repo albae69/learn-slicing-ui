@@ -3,12 +3,13 @@ import {View, Text, Image} from 'react-native';
 
 import {Charts} from '../../assets/images/';
 import {style} from './style.js';
+import ProjectCards from '../../components/ProjectCards';
 
 import useStateContext from '../../store/useStateContext';
 
 const Home = () => {
-  const {state, dispatch} = useStateContext();
-
+  const {state} = useStateContext();
+  const project = state.project;
   return (
     <View style={style.container}>
       <Text style={style.feed}>Feed</Text>
@@ -19,6 +20,11 @@ const Home = () => {
         <View style={style.viewBtn}>
           <Text style={style.viewText}>View All</Text>
         </View>
+      </View>
+      <View style={style.projectContainer}>
+        {project.map((p) => (
+          <ProjectCards title={p.title} owner={p.owner} status={p.status} />
+        ))}
       </View>
     </View>
   );

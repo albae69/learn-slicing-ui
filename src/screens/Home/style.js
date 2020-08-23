@@ -14,7 +14,6 @@ export const style = StyleSheet.create({
     fontFamily: 'RedHatDisplay-Bold',
     fontSize: 39,
     padding: hp('2%'),
-    marginTop: hp('5%'),
     margin: 0,
   },
   resume: {
@@ -33,7 +32,7 @@ export const style = StyleSheet.create({
   },
   activeProject: {
     fontFamily: 'RedHatDisplay-Bold',
-    fontSize: 32,
+    fontSize: 28,
   },
   viewBtn: {
     backgroundColor: '#FBEAFF',
@@ -45,5 +44,8 @@ export const style = StyleSheet.create({
   viewText: {
     fontFamily: 'RedHatDisplay-Medium',
     fontSize: 16,
+  },
+  projectContainer: {
+    alignItems: 'center',
   },
 });
