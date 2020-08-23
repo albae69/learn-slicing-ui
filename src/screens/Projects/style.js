@@ -12,6 +12,7 @@ export const style = StyleSheet.create({
   listProject: {
     width: wp('100%'),
     borderColor: '#99879D',
+    borderBottomWidth: 1,
     padding: 15,
     justifyContent: 'space-between',
     backgroundColor: 'white',
@@ -47,7 +48,7 @@ export const style = StyleSheet.create({
     marginTop: 20,
   },
   wrapListProjects: {
-    borderWidth: 0.5,
+    borderTopWidth: 1,
     borderColor: '#99879D',
   },
 });

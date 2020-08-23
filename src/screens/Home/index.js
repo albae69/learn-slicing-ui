@@ -26,7 +26,14 @@ const Home = ({navigation}) => {
       <View style={style.projectContainer}>
         {project.map((p) => (
           <View key={p.id}>
-            <ProjectCards title={p.title} owner={p.owner} status={p.status} />
+            <ProjectCards
+              title={p.title}
+              owner={p.owner}
+              status={p.status}
+              statusStyle={
+                p.status === 'Active' ? {color: 'green'} : {color: 'orange'}
+              }
+            />
           </View>
         ))}
       </View>

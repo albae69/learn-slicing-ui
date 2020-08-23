@@ -6,6 +6,7 @@ import {
 
 import HomeScreen from '../screens/Home';
 import ProjectsScreen from '../screens/Projects';
+import ProjectsDetailScreen from '../screens/ProjectsDetail';
 
 const UnbdoardingStack = () => {
   const Stack = createStackNavigator();
@@ -13,12 +14,13 @@ const UnbdoardingStack = () => {
   return (
     <Stack.Navigator
       headerMode="none"
-      initialRouteName="Projects"
+      initialRouteName="ProjectsDetail"
       screenOptions={{
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Projects" component={ProjectsScreen} />
+      <Stack.Screen name="ProjectsDetail" component={ProjectsDetailScreen} />
     </Stack.Navigator>
   );
 };

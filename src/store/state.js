@@ -36,7 +36,7 @@ const listProject = [
   },
   {
     id: 4,
-    totalTitle: 'Total Reviews',
+    totalTitle: 'Total reviews',
     totalNumber: '64',
     img: null,
   },

@@ -7,5 +7,17 @@ import Planet from './Planet.png';
 import Money from './Money.png';
 import Charts from './Charts.png';
 import Graph from './Graph.png';
+import Avatar from './Avatar.png';
 
-export {Bubbles, Chat, Charts, Dollar, Heart, LevelUp, Planet, Money, Graph};
+export {
+  Bubbles,
+  Chat,
+  Charts,
+  Dollar,
+  Heart,
+  LevelUp,
+  Planet,
+  Money,
+  Graph,
+  Avatar,
+};

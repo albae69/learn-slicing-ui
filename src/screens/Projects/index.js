@@ -14,16 +14,18 @@ const Projects = () => {
     <View style={style.container}>
       <BackButton />
       <Text style={style.details}>DETAILS</Text>
-      {listProject.map((arr) => (
-        <View key={arr.id} style={style.wrapListProjects}>
-          <ListProjects
-            style={style}
-            totalTitle={arr.totalTitle}
-            totalNumber={arr.totalNumber}
-            img={arr.img}
-          />
-        </View>
-      ))}
+      <View style={style.wrapListProjects}>
+        {listProject.map((arr) => (
+          <View key={arr.id}>
+            <ListProjects
+              style={style}
+              totalTitle={arr.totalTitle}
+              totalNumber={arr.totalNumber}
+              img={arr.img}
+            />
+          </View>
+        ))}
+      </View>
     </View>
   );
 };
