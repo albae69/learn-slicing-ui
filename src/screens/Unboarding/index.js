@@ -13,39 +13,42 @@ import {Formik} from 'formik';
 
 import Button from '../../components/Button';
 import {style} from './style.js';
-import bg from '../../assets/images/Bubbles.png';
-import planet from '../../assets/images/Planet.png';
-import chat from '../../assets/images/Chat.png';
-import dollar from '../../assets/images/Dollar.png';
-import heart from '../../assets/images/Heart.png';
-import levelUp from '../../assets/images/LevelUp.png';
+
+import {
+  Bubbles,
+  Planet,
+  Chat,
+  Dollar,
+  Heart,
+  LevelUp,
+} from '../../assets/images/';
 
 const Introduction = ({navigation}) => {
   const [loading, setLoading] = useState(false);
   const data = [
     {
       id: 1,
-      img: planet,
+      img: Planet,
       text: 'Find Project from companies everywhere in the world',
     },
     {
       id: 2,
-      img: dollar,
+      img: Dollar,
       text: 'Make money while on working on awesome projects',
     },
     {
       id: 3,
-      img: chat,
+      img: Chat,
       text: 'Chat with others freelancers and develop your network',
     },
     {
       id: 4,
-      img: levelUp,
+      img: LevelUp,
       text: 'Work hard and level up!',
     },
     {
       id: 5,
-      img: heart,
+      img: Heart,
       text: 'Enjoy your progress!',
     },
     {
@@ -64,7 +67,7 @@ const Introduction = ({navigation}) => {
         {signUp ? (
           <View style={style.container}>
             <View style={style.container}>
-              <ImageBackground source={bg} style={style.imageBackground}>
+              <ImageBackground source={Bubbles} style={style.imageBackground}>
                 <Pressable
                   style={style.form}
                   onPress={() => Keyboard.dismiss()}>
@@ -169,7 +172,7 @@ const Introduction = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <ImageBackground source={bg} style={style.imageBackground}>
+      <ImageBackground source={Bubbles} style={style.imageBackground}>
         <Text style={style.companyTitle}>Spiice</Text>
         <ScrollView
           horizontal

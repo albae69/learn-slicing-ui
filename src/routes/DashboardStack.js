@@ -43,7 +43,8 @@ const DashboardStack = () => {
         showIcon: true,
         keyboardHidesTabBar: true,
         indicatorStyle: {width: 0},
-      }}>
+      }}
+      initialRouteName="Home">
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Message" component={MessageScreen} />

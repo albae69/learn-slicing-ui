@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 
+import {Charts} from '../../assets/images/';
 import {style} from './style.js';
 
 import useStateContext from '../../store/useStateContext';
@@ -10,7 +11,15 @@ const Home = () => {
 
   return (
     <View style={style.container}>
-      <Text>This is a homescreen</Text>
+      <Text style={style.feed}>Feed</Text>
+      <Text style={style.resume}>Resume</Text>
+      <Image source={Charts} style={style.charts} />
+      <View style={style.listContainer}>
+        <Text style={style.activeProject}>Active Projects</Text>
+        <View style={style.viewBtn}>
+          <Text style={style.viewText}>View All</Text>
+        </View>
+      </View>
     </View>
   );
 };

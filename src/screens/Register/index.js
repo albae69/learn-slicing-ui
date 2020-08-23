@@ -10,7 +10,7 @@ import {
 import {Formik} from 'formik';
 
 import Button from '../../components/Button/';
-import bg from '../../assets/images/Bubbles.png';
+import {Bubbles} from '../../assets/images/';
 import {style} from './style';
 
 const Register = ({navigation}) => {
@@ -21,7 +21,7 @@ const Register = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <ImageBackground source={bg} style={style.imageBackground}>
+      <ImageBackground source={Bubbles} style={style.imageBackground}>
         <Pressable style={style.form} onPress={() => Keyboard.dismiss()}>
           <Text style={style.signUp}>Sign-Up</Text>
           <Formik

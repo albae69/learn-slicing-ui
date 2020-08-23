@@ -14,7 +14,7 @@ import {
 } from 'react-native-responsive-screen';
 
 import Button from '../../components/Button/';
-import bg from '../../assets/images/Bubbles.png';
+import {Bubbles} from '../../assets/images/';
 import {style} from './style';
 
 import useStateContext from '../../store/useStateContext';
@@ -27,7 +27,7 @@ const Register = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <ImageBackground source={bg} style={style.imageBackground}>
+      <ImageBackground source={Bubbles} style={style.imageBackground}>
         <Pressable style={style.form} onPress={() => Keyboard.dismiss()}>
           <Text style={style.login}>Login</Text>
           <Formik

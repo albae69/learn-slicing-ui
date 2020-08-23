@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 
-import bg from '../../assets/images/Bubbles.png';
+import {Bubbles} from '../../assets/images/';
 import {style} from './style';
 
 const SplashScreen = () => {
   return (
     <View style={style.container}>
-      <ImageBackground source={bg} style={style.image}>
+      <ImageBackground source={Bubbles} style={style.image}>
         <Text style={style.companyTitle}>Spiice</Text>
       </ImageBackground>
     </View>

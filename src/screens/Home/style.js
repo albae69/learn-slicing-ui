@@ -7,19 +7,43 @@ import {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
+    width: wp('100%'),
+    backgroundColor: '#FAF9FE',
+  },
+  feed: {
+    fontFamily: 'RedHatDisplay-Bold',
+    fontSize: 39,
+    padding: hp('2%'),
+    marginTop: hp('5%'),
+    margin: 0,
+  },
+  resume: {
+    fontFamily: 'RedHatDisplay-Bold',
+    fontSize: 25,
+    paddingLeft: hp('2%'),
+  },
+  charts: {
+    width: wp('100%'),
+    marginTop: hp('2%'),
+  },
+  listContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: hp('3%'),
+  },
+  activeProject: {
+    fontFamily: 'RedHatDisplay-Bold',
+    fontSize: 32,
+  },
+  viewBtn: {
+    backgroundColor: '#FBEAFF',
+    height: 35,
+    width: 85,
     justifyContent: 'center',
     alignItems: 'center',
-    width: wp('100%'),
   },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  btn: {
-    backgroundColor: 'red',
-  },
-  count: {
-    fontFamily: 'Nunito-Bold',
-    fontSize: 50,
+  viewText: {
+    fontFamily: 'RedHatDisplay-Medium',
+    fontSize: 16,
   },
 });

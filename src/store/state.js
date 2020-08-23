@@ -1,3 +1,3 @@
 export const initialState = {
-  isLogin: true,
+  isLogin: false,
 };
