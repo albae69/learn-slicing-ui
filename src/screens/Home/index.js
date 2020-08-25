@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Pressable} from 'react-native';
 
 import {Charts} from '../../assets/images/';
 import {style} from './style.js';
@@ -9,7 +9,8 @@ import useStateContext from '../../store/useStateContext';
 
 const Home = ({navigation}) => {
   const {state} = useStateContext();
-  const project = state.project;
+  const {project} = state;
+
   return (
     <View style={style.container}>
       <Text style={style.feed}>Feed</Text>
@@ -25,8 +26,15 @@ const Home = ({navigation}) => {
       </View>
       <View style={style.projectContainer}>
         {project.map((p) => (
-          <View key={p.id}>
+          <Pressable
+            key={p.id}
+            onPress={() => {
+              navigation.navigate('ProjectDetail', {
+                data: p.data,
+              });
+            }}>
             <ProjectCards
+              key={p.id}
               title={p.title}
               owner={p.owner}
               status={p.status}
@@ -34,7 +42,7 @@ const Home = ({navigation}) => {
                 p.status === 'Active' ? {color: 'green'} : {color: 'orange'}
               }
             />
-          </View>
+          </Pressable>
         ))}
       </View>
     </View>

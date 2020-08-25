@@ -56,24 +56,6 @@ export const style = StyleSheet.create({
     fontSize: 18,
     marginTop: 10,
   },
-  wrapPayment: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 32,
-  },
-  categoryContainer: {
-    height: 30,
-    borderWidth: 1,
-    borderColor: '#99879D',
-    justifyContent: 'center',
-    borderRadius: 5,
-  },
-  category: {
-    fontSize: 16,
-    color: '#99879D',
-    fontFamily: 'RedHatDisplay-Regular',
-    paddingHorizontal: 20,
-  },
   money: {
     fontFamily: 'RedHatDisplay-Bold',
     color: '#9378FF',

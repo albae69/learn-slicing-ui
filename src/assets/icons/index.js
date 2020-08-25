@@ -6,6 +6,8 @@ import message from './message.png';
 import messageActive from './message-active.png';
 import profile from './profile.png';
 import profileActive from './profile-active.png';
+import Upload from './upload.png';
+import Cancel from './Cancel.png';
 
 export {
   home,
@@ -16,4 +18,6 @@ export {
   messageActive,
   profile,
   profileActive,
+  Upload,
+  Cancel,
 };
