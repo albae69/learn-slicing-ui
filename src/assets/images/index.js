@@ -9,6 +9,7 @@ import Charts from './Charts.png';
 import Graph from './Graph.png';
 import Fransisco from './Fransisco.png';
 import Zoro from './Zoro.png';
+import Arlene from './Arlene.png';
 
 export {
   Bubbles,
@@ -22,4 +23,5 @@ export {
   Graph,
   Fransisco,
   Zoro,
+  Arlene,
 };

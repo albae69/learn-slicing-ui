@@ -8,6 +8,8 @@ import profile from './profile.png';
 import profileActive from './profile-active.png';
 import Upload from './upload.png';
 import Cancel from './Cancel.png';
+import Search from './search.png';
+import Filter from './Filter.png';
 
 export {
   home,
@@ -20,4 +22,6 @@ export {
   profileActive,
   Upload,
   Cancel,
+  Search,
+  Filter,
 };
