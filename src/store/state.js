@@ -1,4 +1,4 @@
-import {Graph, Avatar} from '../assets/images';
+import {Graph, Fransisco, Zoro} from '../assets/images';
 
 const project = [
   {
@@ -9,7 +9,7 @@ const project = [
     data: [
       {
         id: 1,
-        photo: Avatar,
+        photo: Fransisco,
         name: 'Fransisco Fisher',
         posted: '8 day ago',
         deadline: '28/03/2020',
@@ -37,18 +37,18 @@ const project = [
   {
     id: 2,
     title: 'Need a new logo',
-    owner: 'Amel Rio',
+    owner: 'Roronoa Zoro',
     status: 'Pending',
     data: [
       {
         id: 1,
-        photo: Avatar,
-        name: 'Amel Rio',
+        photo: Zoro,
+        name: 'Roronoa Zoro',
         posted: '7 day ago',
         deadline: '27/03/2020',
         title: 'Need a new logo',
         desc:
-          'I need a designer for my new website logo. The project is just at the beginning and I need a new logo  before I start coding the website.',
+          'I need a designer for my new website logo. The project is just at the beginning and I need a new logo  before I start coding the website. WHERE MY SAKE!',
         category: [
           {
             id: 0,

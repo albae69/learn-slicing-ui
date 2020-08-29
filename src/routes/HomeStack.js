@@ -9,7 +9,7 @@ import ProjectsScreen from '../screens/Projects';
 import ProjectDetailScreen from '../screens/ProjectDetail';
 import UploadProjectScreen from '../screens/UploadProject';
 
-const UnbdoardingStack = () => {
+const HomeStack = () => {
   const Stack = createStackNavigator();
 
   return (
@@ -26,4 +26,4 @@ const UnbdoardingStack = () => {
   );
 };
 
-export default UnbdoardingStack;
+export default HomeStack;

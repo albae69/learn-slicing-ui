@@ -33,6 +33,10 @@ export const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  photo: {
+    height: hp('10%'),
+    width: hp('10%'),
+  },
   name: {
     color: '#120E21',
     fontFamily: 'RedHatDisplay-Bold',
@@ -72,7 +76,6 @@ export const style = StyleSheet.create({
     padding: hp('1%'),
     paddingTop: 0,
     marginBottom: 10,
-    justifyContent: 'flex-start',
   },
   money: {
     fontFamily: 'RedHatDisplay-Bold',

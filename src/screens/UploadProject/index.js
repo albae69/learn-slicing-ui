@@ -9,13 +9,13 @@ import {
 } from 'react-native';
 
 import {style} from './style';
-import {Avatar} from '../../assets/images/';
 import {Upload, Cancel} from '../../assets/icons/';
 import BackButton from '../../components/BackButton';
 import Button from '../../components/Button';
 
-const ProjectsDetail = ({navigation}) => {
+const ProjectsDetail = ({navigation, route}) => {
   const [loading, setLoading] = useState(false);
+  let data = route.params.data;
 
   const uploadFile = () => {
     setLoading(true);
@@ -30,10 +30,12 @@ const ProjectsDetail = ({navigation}) => {
     <View style={style.container}>
       <BackButton />
       <View style={style.containerProject}>
-        <View style={style.profile}>
-          <Image source={Avatar} />
-          <Text style={style.name}>Fransisco Fisher</Text>
-        </View>
+        {data.map((d) => (
+          <View style={style.profile}>
+            <Image source={d.photo} style={style.photo} />
+            <Text style={style.name}>{d.name}</Text>
+          </View>
+        ))}
         <Text style={style.title}>Send your work</Text>
         <View style={style.message}>
           <TextInput

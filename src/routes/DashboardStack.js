@@ -18,6 +18,7 @@ import {
   profile,
   profileActive,
 } from '../assets/icons';
+import SearchStack from './SearchStack';
 
 const DashboardStack = () => {
   const Tab = createBottomTabNavigator();
@@ -45,9 +46,9 @@ const DashboardStack = () => {
         keyboardHidesTabBar: true,
         indicatorStyle: {width: 0},
       }}
-      initialRouteName="Home">
+      initialRouteName="Search">
       <Tab.Screen name="Home">{() => <HomeStack />}</Tab.Screen>
-      <Tab.Screen name="Search" component={SearchScreen} />
+      <Tab.Screen name="Search">{() => <SearchStack />}</Tab.Screen>
       <Tab.Screen name="Message" component={MessageScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

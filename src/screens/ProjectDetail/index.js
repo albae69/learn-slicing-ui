@@ -20,7 +20,7 @@ const ProjectDetail = ({route}) => {
           </View>
           <View style={style.containerProject}>
             <View style={style.profile}>
-              <Image source={b.photo} />
+              <Image source={b.photo} style={style.photo} />
               <Text style={style.name}>{b.name}</Text>
             </View>
             <Text style={style.time}>Posted {b.posted}</Text>
@@ -39,7 +39,11 @@ const ProjectDetail = ({route}) => {
             <Button
               title="Send your work"
               styles={style.btn}
-              onPress={() => navigation.navigate('UploadProject')}
+              onPress={() =>
+                navigation.navigate('UploadProject', {
+                  data: data,
+                })
+              }
             />
           </View>
         </React.Fragment>

@@ -17,6 +17,10 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     height: 50,
   },
+  photo: {
+    height: hp('10%'),
+    width: hp('10%'),
+  },
   name: {
     color: '#120E21',
     fontFamily: 'RedHatDisplay-Bold',

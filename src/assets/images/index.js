@@ -7,7 +7,8 @@ import Planet from './Planet.png';
 import Money from './Money.png';
 import Charts from './Charts.png';
 import Graph from './Graph.png';
-import Avatar from './Avatar.png';
+import Fransisco from './Fransisco.png';
+import Zoro from './Zoro.png';
 
 export {
   Bubbles,
@@ -19,5 +20,6 @@ export {
   Planet,
   Money,
   Graph,
-  Avatar,
+  Fransisco,
+  Zoro,
 };
