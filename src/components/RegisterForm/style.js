@@ -38,4 +38,24 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  form: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    padding: hp('2%'),
+    marginBottom: hp('20%'),
+    borderRadius: hp('2%'),
+  },
+  signUp: {
+    textAlign: 'center',
+    fontFamily: 'RedHatDisplay-Bold',
+    fontSize: 32,
+    marginBottom: hp('6%'),
+    marginTop: hp('4%'),
+  },
+  input: {
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: '#FBEEFF',
+    paddingLeft: 10,
+    margin: 10,
+  },
 });

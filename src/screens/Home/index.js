@@ -1,5 +1,12 @@
-import React from 'react';
-import {View, Text, Image, TouchableOpacity, Pressable} from 'react-native';
+import React, {useRef} from 'react';
+import {
+  View,
+  ScrollView,
+  Text,
+  Image,
+  TouchableOpacity,
+  Pressable,
+} from 'react-native';
 
 import {Charts} from '../../assets/images/';
 import {style} from './style.js';
@@ -10,6 +17,8 @@ import useStateContext from '../../store/useStateContext';
 const Home = ({navigation}) => {
   const {state} = useStateContext();
   const {project} = state;
+
+  const scrollRef = useRef();
 
   return (
     <View style={style.container}>
@@ -24,7 +33,7 @@ const Home = ({navigation}) => {
           <Text style={style.viewText}>View All</Text>
         </TouchableOpacity>
       </View>
-      <View style={style.projectContainer}>
+      <ScrollView contentContainerStyle={style.projectContainer}>
         {project.map((p) => (
           <Pressable
             key={p.id}
@@ -44,7 +53,7 @@ const Home = ({navigation}) => {
             />
           </Pressable>
         ))}
-      </View>
+      </ScrollView>
     </View>
   );
 };

@@ -10,7 +10,7 @@ export const style = StyleSheet.create({
     backgroundColor: '#FAF9FE',
   },
   notification: {
-    height: 100,
+    height: hp('10%'),
     width: wp('100%'),
     backgroundColor: '#9378FF',
     justifyContent: 'center',
@@ -48,13 +48,31 @@ export const style = StyleSheet.create({
   title: {
     color: 'black',
     fontFamily: 'RedHatDisplay-Bold',
-    fontSize: 28,
+    fontSize: 24,
   },
   desc: {
     color: '#99879D',
     fontFamily: 'RedHatDisplay-Regular',
-    fontSize: 18,
+    fontSize: 16,
     marginTop: 10,
+  },
+  wrapPayment: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    paddingLeft: 30,
+    paddingRight: 30,
+  },
+  containerCategory: {
+    height: hp('3%'),
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 5,
+    textAlignVertical: 'center',
+    padding: hp('1%'),
+    paddingTop: 0,
+    marginBottom: 10,
+    justifyContent: 'flex-start',
   },
   money: {
     fontFamily: 'RedHatDisplay-Bold',
@@ -67,5 +85,6 @@ export const style = StyleSheet.create({
   },
   btn: {
     width: wp('70%'),
+    height: hp('8%'),
   },
 });

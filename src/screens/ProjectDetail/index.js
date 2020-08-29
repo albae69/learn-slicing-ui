@@ -15,8 +15,8 @@ const ProjectDetail = ({route}) => {
     <View style={style.container}>
       <BackButton />
       {data.map((b) => (
-        <>
-          <View style={style.notification} key={b.id}>
+        <React.Fragment key={b.id}>
+          <View style={style.notification}>
             <Text style={style.charge}>You are in charge of this project</Text>
             <Text style={style.deadline}>Deadline {b.deadline}</Text>
           </View>
@@ -29,28 +29,9 @@ const ProjectDetail = ({route}) => {
             <Text style={style.title}>{b.title}</Text>
             <Text style={style.desc}>{b.desc}</Text>
           </View>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              paddingLeft: 30,
-              paddingRight: 30,
-            }}>
+          <View style={style.wrapPayment}>
             {b.category.map((s) => (
-              <View
-                key={s.id}
-                style={{
-                  height: 25,
-                  borderColor: 'black',
-                  borderWidth: 1,
-                  borderRadius: 5,
-                  textAlignVertical: 'center',
-                  marginBottom: 10,
-                  paddingLeft: 10,
-                  paddingRight: 10,
-                  justifyContent: 'flex-start',
-                }}>
+              <View key={s.id} style={style.containerCategory}>
                 <Text>{s.category.toUpperCase()}</Text>
               </View>
             ))}
@@ -59,7 +40,7 @@ const ProjectDetail = ({route}) => {
           <View style={style.btnWrap}>
             <Button title="Send your work" styles={style.btn} />
           </View>
-        </>
+        </React.Fragment>
       ))}
     </View>
   );

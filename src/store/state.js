@@ -64,11 +64,7 @@ const project = [
           },
           {
             id: 3,
-            category: ' graphic',
-          },
-          {
-            id: 4,
-            category: 'design',
+            category: ' graphic design',
           },
         ],
         price: '$690',
