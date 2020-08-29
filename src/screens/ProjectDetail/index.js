@@ -1,15 +1,13 @@
 import React from 'react';
-import {ScrollView, View, Text, Image} from 'react-native';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import {View, Text, Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import {style} from './style';
 import BackButton from '../../components/BackButton';
 import Button from '../../components/Button';
 
 const ProjectDetail = ({route}) => {
+  const navigation = useNavigation();
   const data = route.params.data;
   return (
     <View style={style.container}>
@@ -38,7 +36,11 @@ const ProjectDetail = ({route}) => {
             <Text style={style.money}>{b.price}</Text>
           </View>
           <View style={style.btnWrap}>
-            <Button title="Send your work" styles={style.btn} />
+            <Button
+              title="Send your work"
+              styles={style.btn}
+              onPress={() => navigation.navigate('UploadProject')}
+            />
           </View>
         </React.Fragment>
       ))}

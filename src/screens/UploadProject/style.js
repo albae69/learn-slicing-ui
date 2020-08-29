@@ -15,6 +15,7 @@ export const style = StyleSheet.create({
   profile: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: 50,
   },
   name: {
     color: '#120E21',
@@ -33,10 +34,13 @@ export const style = StyleSheet.create({
     alignItems: 'center',
   },
   btn: {
+    position: 'relative',
     width: wp('70%'),
+    height: 50,
+    bottom: 20,
   },
   message: {
-    height: 150,
+    height: hp('15%'),
     width: wp('85%'),
     backgroundColor: '#FBEEFF',
     borderRadius: 15,
