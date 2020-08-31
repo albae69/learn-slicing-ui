@@ -1,4 +1,4 @@
-import {LOGIN} from './types';
+import {LOGIN, READ} from './types';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -7,7 +7,11 @@ const reducer = (state, action) => {
         ...state,
         isLogin: true,
       };
-
+    case READ:
+      return {
+        ...state,
+        messages: action.messages,
+      };
     default:
       return state;
   }

@@ -59,6 +59,7 @@ const Search = ({navigation}) => {
       <Text style={style.search}>Search</Text>
       <View style={style.textInputContainer}>
         <TextInput
+          placeholder="Search.."
           style={style.textInput}
           value={text}
           onChangeText={(value) => setText(value)}

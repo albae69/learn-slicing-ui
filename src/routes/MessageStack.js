@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack';
 
 import Message from '../screens/Message';
+import Chat from '../screens/Chat';
 
 const HomeStack = () => {
   const Stack = createStackNavigator();
@@ -16,6 +17,7 @@ const HomeStack = () => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen name="Message" component={Message} />
+      <Stack.Screen name="Chat" component={Chat} />
     </Stack.Navigator>
   );
 };

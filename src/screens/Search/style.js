@@ -14,11 +14,13 @@ export const style = StyleSheet.create({
     fontFamily: 'RedHatDisplay-Bold',
     fontSize: 39,
   },
-  searchIcon: {position: 'absolute', right: 30, height: 18, width: 18},
+  searchIcon: {
+    position: 'relative',
+    right: hp('5%'),
+  },
   textInputContainer: {
     alignItems: 'center',
     height: 45,
-    backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     justifyContent: 'center',
   },
@@ -28,6 +30,7 @@ export const style = StyleSheet.create({
     height: 45,
     borderRadius: 8,
     borderColor: '#99879D',
+    backgroundColor: 'white',
   },
   filter: {
     flexDirection: 'row',
@@ -54,7 +57,7 @@ export const style = StyleSheet.create({
     height: hp('10%'),
     borderTopLeftRadius: hp('1%'),
     borderTopRightRadius: hp('1%'),
-    padding: hp('2%'),
+    justifyContent: 'center',
     paddingLeft: hp('3%'),
   },
   wrapProfile: {

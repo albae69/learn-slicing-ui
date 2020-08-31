@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, Image} from 'react-native';
 
 import BackButton from './../../components/BackButton/';
@@ -7,8 +7,6 @@ import {style} from './style';
 
 const SearchProjectDetail = ({navigation, route}) => {
   let data = route.params.data;
-
-  const [loading, setLoading] = useState(false);
 
   return (
     <View style={style.container}>
@@ -41,13 +39,8 @@ const SearchProjectDetail = ({navigation, route}) => {
           activeOpacity={0.8}
           title="Make a proportion"
           onPress={() => {
-            setLoading(true);
-            setTimeout(() => {
-              setLoading(false);
-              navigation.navigate('MessageProportion', {data: data});
-            }, 1000);
+            navigation.navigate('MessageProportion', {data: data});
           }}
-          loading={loading}
         />
       </View>
     </View>
