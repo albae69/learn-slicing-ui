@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack';
 
 import Search from '../screens/Search';
+import SearchProjectDetail from '../screens/SearchProjectDetail';
 
 const SearchStack = () => {
   const Stack = createStackNavigator();
@@ -16,6 +17,10 @@ const SearchStack = () => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen
+        name="SearchProjectDetail"
+        component={SearchProjectDetail}
+      />
     </Stack.Navigator>
   );
 };

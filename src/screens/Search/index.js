@@ -1,25 +1,17 @@
-import React from 'react';
-import {View, Image, Text, TextInput} from 'react-native';
+import React, {useState} from 'react';
+import {View, Image, Text, TextInput, Pressable} from 'react-native';
 
-import {Arlene} from '../../assets/images/';
 import {Search as SearchIcon, Filter} from '../../assets/icons';
 import {style} from './style';
 
-const Search = () => {
-  const searchData = [
-    {
-      id: 0,
-      name: 'Arlene Mckinney',
-      photo: Arlene,
-      posted: '3 days ago',
-      title: 'Create an application',
-      desc:
-        'We are a young startup from Paris looking for a designer who can help us design a tech oriented application. We are open to proposals.',
-      total: 16,
-      price: 2400,
-      category: ['UI/UX', 'DESIGN', 'FIGMA', 'PHOTOSHOP'],
-    },
-  ];
+import useStateContext from '../../store/useStateContext';
+
+const Search = ({navigation}) => {
+  const [text, setText] = useState('');
+
+  const {state} = useStateContext();
+
+  const searchData = state.searchData;
 
   const NewProject = ({
     photo,
@@ -66,7 +58,11 @@ const Search = () => {
     <View style={style.container}>
       <Text style={style.search}>Search</Text>
       <View style={style.textInputContainer}>
-        <TextInput style={style.textInput} />
+        <TextInput
+          style={style.textInput}
+          value={text}
+          onChangeText={(value) => setText(value)}
+        />
         <Image source={SearchIcon} style={style.searchIcon} />
       </View>
       <View style={style.filter}>
@@ -75,7 +71,12 @@ const Search = () => {
       </View>
       {searchData.map((s) => (
         <View style={style.cardContainer} key={s.id}>
-          <NewProject {...s} />
+          <Pressable
+            onPress={() =>
+              navigation.navigate('SearchProjectDetail', {data: searchData})
+            }>
+            <NewProject {...s} />
+          </Pressable>
         </View>
       ))}
     </View>

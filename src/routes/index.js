@@ -11,15 +11,15 @@ const Routes = () => {
   const {state} = useStateContext();
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => {
-      setLoading(false);
-    };
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+  //   return () => {
+  //     setLoading(false);
+  //   };
+  // }, []);
 
   return (
     <>

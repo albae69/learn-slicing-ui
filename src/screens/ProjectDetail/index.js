@@ -1,13 +1,11 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 
 import {style} from './style';
 import BackButton from '../../components/BackButton';
 import Button from '../../components/Button';
 
-const ProjectDetail = ({route}) => {
-  const navigation = useNavigation();
+const ProjectDetail = ({navigation, route}) => {
   const data = route.params.data;
   return (
     <View style={style.container}>

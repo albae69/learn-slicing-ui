@@ -1,4 +1,4 @@
-import {Graph, Fransisco, Zoro} from '../assets/images';
+import {Graph, Fransisco, Zoro, Arlene} from '../assets/images';
 
 const project = [
   {
@@ -73,6 +73,23 @@ const project = [
   },
 ];
 
+const searchData = [
+  {
+    id: 0,
+    name: 'Arlene Mckinney',
+    photo: Arlene,
+    posted: '3 days ago',
+    title: 'Create an application',
+    desc:
+      'We are a young startup from Paris looking for a designer who can help us design a tech oriented application. We are open to proposals.',
+    subDesc:
+      'You can saw our project here: \n http://zotware.com \n We are working with Figma and Photoshop',
+    total: 16,
+    price: 2400,
+    category: ['UI/UX', 'DESIGN', 'FIGMA', 'PHOTOSHOP'],
+  },
+];
+
 const listProject = [
   {
     id: 1,
@@ -104,4 +121,5 @@ export const initialState = {
   isLogin: true,
   project: project,
   listProject: listProject,
+  searchData: searchData,
 };
