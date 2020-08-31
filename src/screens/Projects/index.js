@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Animated} from 'react-native';
+import {View, Text} from 'react-native';
 
 import {style} from './style';
 import BackButton from '../../components/BackButton';
@@ -17,14 +17,14 @@ const Projects = () => {
       <Text style={style.details}>DETAILS</Text>
       <View style={style.wrapListProjects}>
         {listProject.map((arr) => (
-          <Animated.View key={arr.id}>
+          <View key={arr.id}>
             <ListProjects
               style={style}
               totalTitle={arr.totalTitle}
               totalNumber={arr.totalNumber}
               img={arr.img}
             />
-          </Animated.View>
+          </View>
         ))}
       </View>
     </View>

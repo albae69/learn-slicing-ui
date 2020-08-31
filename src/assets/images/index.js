@@ -10,6 +10,12 @@ import Graph from './Graph.png';
 import Fransisco from './Fransisco.png';
 import Zoro from './Zoro.png';
 import Arlene from './Arlene.png';
+import Alex from './Alex.png';
+import Norma from './Norma.png';
+import Morris from './Morris.png';
+import Kylie from './Kylie.png';
+import Ted from './Ted.png';
+import Wade from './Wade.png';
 
 export {
   Bubbles,
@@ -24,4 +30,10 @@ export {
   Fransisco,
   Zoro,
   Arlene,
+  Alex,
+  Norma,
+  Morris,
+  Kylie,
+  Ted,
+  Wade,
 };

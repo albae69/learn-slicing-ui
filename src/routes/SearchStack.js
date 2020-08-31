@@ -6,6 +6,7 @@ import {
 
 import Search from '../screens/Search';
 import SearchProjectDetail from '../screens/SearchProjectDetail';
+import MessageProportion from '../screens/MessageProportion/';
 
 const SearchStack = () => {
   const Stack = createStackNavigator();
@@ -21,6 +22,7 @@ const SearchStack = () => {
         name="SearchProjectDetail"
         component={SearchProjectDetail}
       />
+      <Stack.Screen name="MessageProportion" component={MessageProportion} />
     </Stack.Navigator>
   );
 };

@@ -1,4 +1,15 @@
-import {Graph, Fransisco, Zoro, Arlene} from '../assets/images';
+import {
+  Graph,
+  Fransisco,
+  Zoro,
+  Arlene,
+  Alex,
+  Norma,
+  Morris,
+  Kylie,
+  Ted,
+  Wade,
+} from '../assets/images';
 
 const project = [
   {
@@ -117,9 +128,61 @@ const listProject = [
   },
 ];
 
+const messages = [
+  {
+    id: 0,
+    name: 'Alex Marchal',
+    photo: Alex,
+    newMessage: 'I have some questions about..',
+    allMessage: [{}],
+    read: true,
+  },
+  {
+    id: 1,
+    name: 'Norma Wilson',
+    photo: Norma,
+    newMessage: 'http://www.warephase.com',
+    allMessage: [{}],
+    read: false,
+  },
+  {
+    id: 2,
+    name: 'Morris Murphy',
+    photo: Morris,
+    newMessage: 'Hope it will work in the week',
+    allMessage: [{}],
+    read: true,
+  },
+  {
+    id: 3,
+    name: 'Kylie Lane',
+    photo: Kylie,
+    newMessage: 'Thank you!it really shine with...',
+    allMessage: [{}],
+    read: false,
+  },
+  {
+    id: 4,
+    name: 'Ted Steward',
+    photo: Ted,
+    newMessage: 'Yes I know',
+    allMessage: [{}],
+    read: true,
+  },
+  {
+    id: 5,
+    name: 'Wade Mccoy',
+    photo: Wade,
+    newMessage: 'It will be online in 2 days',
+    allMessage: [{}],
+    read: false,
+  },
+];
+
 export const initialState = {
   isLogin: true,
   project: project,
   listProject: listProject,
   searchData: searchData,
+  messages: messages,
 };

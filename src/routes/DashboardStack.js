@@ -2,10 +2,10 @@ import React from 'react';
 import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import HomeStack from '../routes/HomeStack';
+import HomeStack from './HomeStack';
+import SearchStack from './SearchStack';
+import MessageStack from './MessageStack';
 
-import SearchScreen from '../screens/Search';
-import MessageScreen from '../screens/Message';
 import ProfileScreen from '../screens/Profile';
 
 import {
@@ -18,7 +18,6 @@ import {
   profile,
   profileActive,
 } from '../assets/icons';
-import SearchStack from './SearchStack';
 
 const DashboardStack = () => {
   const Tab = createBottomTabNavigator();
@@ -46,11 +45,11 @@ const DashboardStack = () => {
         keyboardHidesTabBar: true,
         indicatorStyle: {width: 0},
       }}
-      // initialRouteName="Search"
+      // initialRouteName="Message"
     >
       <Tab.Screen name="Home">{() => <HomeStack />}</Tab.Screen>
       <Tab.Screen name="Search">{() => <SearchStack />}</Tab.Screen>
-      <Tab.Screen name="Message" component={MessageScreen} />
+      <Tab.Screen name="Message">{() => <MessageStack />}</Tab.Screen>
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );

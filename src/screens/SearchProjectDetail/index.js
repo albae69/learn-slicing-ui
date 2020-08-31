@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, Text, Image, Alert} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, Image} from 'react-native';
 
 import BackButton from './../../components/BackButton/';
 import Button from './../../components/Button/';
@@ -7,7 +7,9 @@ import {style} from './style';
 
 const SearchProjectDetail = ({navigation, route}) => {
   let data = route.params.data;
-  console.log(data);
+
+  const [loading, setLoading] = useState(false);
+
   return (
     <View style={style.container}>
       <BackButton />
@@ -36,13 +38,16 @@ const SearchProjectDetail = ({navigation, route}) => {
       ))}
       <View style={style.btn}>
         <Button
+          activeOpacity={0.8}
           title="Make a proportion"
-          onPress={() =>
-            Alert.alert(
-              'mau buat proporsi?',
-              'kamu mau buat proporsi buat si anu?',
-            )
-          }
+          onPress={() => {
+            setLoading(true);
+            setTimeout(() => {
+              setLoading(false);
+              navigation.navigate('MessageProportion', {data: data});
+            }, 1000);
+          }}
+          loading={loading}
         />
       </View>
     </View>
