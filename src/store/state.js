@@ -134,7 +134,26 @@ const messages = [
     name: 'Alex Marchal',
     photo: Alex,
     newMessage: 'I have some questions about..',
-    allMessage: [{}],
+    allMessage: [
+      {
+        id: 1,
+        msg: 'possible to send me the documents? Thank you very much.',
+      },
+      {
+        id: 2,
+        msg:
+          'No problem Dustin, I send you the documents when I arrived at my office!',
+      },
+      {
+        id: 3,
+        msg:
+          "I have received your documents. Maybe we can try another color for the homepage, I'm already working on a proposal. Also i saw that the wording has a lot of spelling mistakes, I see. I send you everthing tomorrow",
+      },
+      {
+        id: 4,
+        msg: 'Nice!Sorry for the spelling mistakes, the text was pretty old.',
+      },
+    ],
     read: true,
   },
   {
@@ -180,7 +199,7 @@ const messages = [
 ];
 
 export const initialState = {
-  isLogin: true,
+  isLogin: false,
   project: project,
   listProject: listProject,
   searchData: searchData,

@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Chat = ({route}) => {
   let d = route.params.data;
+  console.log(d.allMessage.map((d) => d));
   return (
     <View style={style.container}>
       <BackButton />
@@ -21,6 +22,24 @@ const Chat = ({route}) => {
           <Icon name="dots-vertical" size={30} />
         </View>
       </View>
+      {d.allMessage.map((g) => (
+        <View key={g.id} style={{marginBottom: 10, fontSize: 100, padding: 16}}>
+          {g.id % 2 ? (
+            <View
+              style={{
+                width: 250,
+                position: 'relative',
+                left: 150,
+              }}>
+              <Text>{g.msg}</Text>
+            </View>
+          ) : (
+            <View style={{width: 250}}>
+              <Text>{g.msg}</Text>
+            </View>
+          )}
+        </View>
+      ))}
     </View>
   );
 };
